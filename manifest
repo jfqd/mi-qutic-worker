@@ -1,0 +1,8 @@
+name="qutic-worker"
+organization="qutic development"
+brand="Worker Instance"
+version="17.4.0"
+description="qutic worker image"
+homepage="https://github.com/jfqd/mi-qutic-worker"
+users="root admin"
+base="7463e66c-f2df-11e7-9910-c77edbdd6194"

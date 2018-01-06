@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+
+PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
+
+# Exit if any commands fail
+set -o errexit
+
+MUNIN_PLUGINS="
+	unbound_histogram
+	unbound_hits
+	unbound_memory
+	unbound_queue
+"
+# link additional plugins
+ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_class
+ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_flags
+ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_opcode
+ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_rcode
+ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_type
+
+# unbound config
+mkdir -p /opt/local/etc/unbound/local.d
+chown unbound:unbound /opt/local/etc/unbound/
+chown unbound:unbound /opt/local/etc/unbound/root.hints
+unbound-anchor
+/usr/sbin/svcadm enable -r svc:/pkgsrc/unbound:default
+
+# Configuring image specific packages
+echo "* Configuring image specific packages.";
+
+# Clean up
+echo "* Cleaning up."
+rm /root/customize
+
+# Prepare image for provisioning
+sm-prepare-image -y
