@@ -20,6 +20,7 @@ ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbou
 
 # unbound config
 mkdir -p /opt/local/etc/unbound/local.d
+touch /opt/local/etc/unbound/root.hints
 chown unbound:unbound /opt/local/etc/unbound/
 chown unbound:unbound /opt/local/etc/unbound/root.hints
 unbound-anchor
