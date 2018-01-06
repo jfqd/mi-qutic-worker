@@ -22,17 +22,6 @@ ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbou
 ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_memory
 ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_queue
 
-# unbound config
-mkdir -p /opt/local/etc/unbound/local.d
-touch /opt/local/etc/unbound/root.hints
-touch /opt/local/etc/unbound/unbound.log
-chown unbound:unbound /opt/local/etc/unbound/
-chown unbound:unbound /opt/local/etc/unbound/root.hints
-chown unbound:unbound /opt/local/etc/unbound/unbound.log
-ln -nfs /opt/local/etc/unbound/unbound.log /var/log/unbound.log
-unbound-anchor
-/usr/sbin/svcadm enable -r svc:/pkgsrc/unbound:default
-
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
 
