@@ -5,17 +5,15 @@ PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 # Exit if any commands fail
 set -o errexit
 
-MUNIN_PLUGINS="
-	unbound_histogram
-	unbound_hits
-	unbound_memory
-	unbound_queue
-	unbound_int_by_class
-	unbound_int_by_flags
-	unbound_int_by_opcode
-	unbound_int_by_rcode
-	unbound_int_by_type
-"
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_histogram
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_hits
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_memory
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_queue
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_int_by_class
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_int_by_flags
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_int_by_opcode
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_int_by_rcode
+ln -nfs /opt/local/lib/munin/plugins/unbound_ unbound_int_by_type
 
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
