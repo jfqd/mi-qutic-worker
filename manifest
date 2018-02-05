@@ -1,7 +1,7 @@
 name="qutic-worker"
 organization="qutic development"
 brand="Worker Instance"
-version="17.4.1"
+version="17.4.2"
 description="qutic worker image"
 homepage="https://github.com/jfqd/mi-qutic-worker"
 users="root admin"
