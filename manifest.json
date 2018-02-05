@@ -5,7 +5,7 @@
   "organization": "qutic development",
   "brand":        "Worker Instance",
   "homepage":     "https://github.com/jfqd/mi-qutic-worker",
-  "base":         "33ea1d60-04df-11e8-a4e4-2372e56592d4",
+  "base":         "31ea7dee-0a8d-11e8-9d33-eb63e3201a8b",
   "customer_metadata": {
     "admin_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the admin user"},
     "root_authorized_keys":  {"type": "text", "description": "SSH public authorized key(s) for the root user"},
