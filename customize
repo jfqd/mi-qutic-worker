@@ -15,6 +15,9 @@ ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbou
 ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_rcode
 ln -nfs /opt/local/lib/munin/plugins/unbound_ /opt/local/etc/munin/plugins/unbound_int_by_type
 
+ln -nfs /opt/local/lib/munin/plugins/epdu /opt/local/etc/munin/plugins/epdu
+ln -nfs /opt/local/lib/munin/plugins/switch_int /opt/local/etc/munin/plugins/switch_int
+
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
 
