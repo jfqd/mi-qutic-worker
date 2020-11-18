@@ -1,11 +1,11 @@
 {
   "name":         "qutic-worker",
-  "version":      "17.4.3",
+  "version":      "20191127.1",
   "description":  "qutic worker image",
   "organization": "qutic development",
   "brand":        "Worker Instance",
   "homepage":     "https://github.com/jfqd/mi-qutic-worker",
-  "base":         "26cf8c16-2b8e-11e8-8d7f-3fff13b53d67",
+  "base":         "bbbdcfc0-200c-11eb-bf50-1bc722d57c54",
   "customer_metadata": {
     "admin_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the admin user"},
     "root_authorized_keys":  {"type": "text", "description": "SSH public authorized key(s) for the root user"},
