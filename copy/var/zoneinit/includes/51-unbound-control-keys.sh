@@ -7,7 +7,7 @@ chown unbound:unbound /opt/local/etc/unbound/unbound.log
 ln -nfs /opt/local/etc/unbound/unbound.log /var/log/unbound_log
 
 wget ftp://ftp.internic.net/domain/named.cache -O /opt/local/etc/unbound/root.hints || true
-chown unbound:unbound /opt/local/etc/unbound/root.hints
+chown unbound:unbound /opt/local/etc/unbound/root.hints || true
 
 /opt/local/sbin/unbound-anchor 1>/dev/null 2>&1 || true
 
