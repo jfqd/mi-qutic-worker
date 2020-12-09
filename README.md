@@ -47,3 +47,12 @@ vmadm create << EOF
 }
 EOF
 ```
+
+## dns-blocklist
+
+To use the dns-blocklist add this crontab entry:
+
+```
+30 23 * * * /opt/local/bin/dns_blocklist.sh -u -s 1,2,3,4,5,6,7,8,9,10,11,12,13,14,'https://easylist.to/easylistgermany/easylistgermany.txt','https://easylist.to/easylist/easyprivacy.txt','https://easylist.to/easylist/fanboy-social.txt','https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/win7/extra.txt','https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/win7/spy.txt','https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt','https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt','https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt','https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/spyware.txt' -b /opt/local/etc/unbound/local.d/blocklist.conf -r 0.0.0.0
+```
+
