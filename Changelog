@@ -1,5 +1,16 @@
 # Changelog
 
+## 20201019.1
+
+* use latest qutic base image
+* remove munin config
+* update unbound conf file
+* update crontab
+* allow zabbix connection
+* cleanup ipv4 config
+* add ipv6 config
+* add dns-blocklist script
+
 ## 20191127.1
 
 * use latest qutic base image

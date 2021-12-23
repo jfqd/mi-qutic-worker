@@ -1,6 +1,6 @@
 {
   "name":         "qutic-worker",
-  "version":      "20191127.1",
+  "version":      "20201019.1",
   "description":  "qutic worker image",
   "organization": "qutic development",
   "brand":        "Worker Instance",
