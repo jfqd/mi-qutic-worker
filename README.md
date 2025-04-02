@@ -2,9 +2,6 @@
 
 use [joyent/mibe](https://github.com/joyent/mibe) to create a provisionable image
 
-- `nginx_ssl`: ssl certificate for nginx web interface
-- `munin_admin`: admin password for munin admin interface
-
 ## installation
 
 The following sample can be used to create a zone running a copy of the the worker image.
@@ -41,8 +38,7 @@ vmadm create << EOF
     "mail_smarthost":        "mail.example.com",
     "mail_auth_user":        "you@example.com",
     "mail_auth_pass":        "smtp-account-password",
-    "mail_adminaddr":        "report@example.com",
-    "munin_master_allow":    "munin-master-ip"
+    "mail_adminaddr":        "report@example.com"
   }
 }
 EOF
